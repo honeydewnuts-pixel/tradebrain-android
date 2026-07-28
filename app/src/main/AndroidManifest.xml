@@ -1,0 +1,19 @@
+<manifest package="com.tradebrain.app">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:label="TradeBrain"
+        android:theme="@style/Theme.AppCompat.Light">
+        
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <service android:name=".ScreenshotService" android:foregroundServiceType="mediaProjection" />
+    </application>
+</manifest>
